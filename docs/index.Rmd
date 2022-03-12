@@ -1,0 +1,42 @@
+---
+title: "A3: Incarceration Data Visulizations"
+output: html_document
+---
+
+```{r setup, include=FALSE, warning=FALSE, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include=FALSE, warning=FALSE, echo=FALSE, message=FALSE}
+source("analysis.R")
+```
+# Inequality in the Incarceration System and its Effects
+#### A report by Sean Lim
+
+
+### Introduction
+  Through data collected by the *Vera Institute's* researchers, activists, and advocates around the country, we are able to analyze a complete and indepth data set concerning incarceration. Through this report, I hope to provide data visualizations that not only bring to light the intense and reoccurring inequality within the prison system, but also to highlight unfair incarceration trends and patterns that fall upon various people of color and gender. To be more specific, I wanted to focus on male minorities that are incarcerated, and be able to come to a conclusion with the data that I had formulated. Within this report, the variables that I choose to analyze that I best believe highlight the patterns happening in the prison system are: total prison population of minority men, the percentage of populations of AAPI men, Black men. 
+  
+### Summary 
+  While wrangling the data set provied by *Vera Institute*, I was able to dive deeper into the variables that I choose to calculate. Ranging from the county with the highest minority population, to which state had the highest percentage of minorities, it was intriguing to see the values that came up. The state with the highest percentage of AAPI prison population was **Nebraska (NE)**, while the state with the highest percentage of Black prison population was **California (CA)**. The highest amount of men incarcerated in a single county was found to be **39601**. What is even more interesting is that the county with the highest percentage of AAPI prisoners is in **Shasta County, CA**. We can infer that this county could possibly be the related the the county with the highest amount of men incarcerated in total. 
+  
+  In these three data visualizations that have been created, they compare ethnicites and display relevent data. The first graph depicts the percentage of AAPI population over time in California and Washington.
+  
+```{r pressure, echo=FALSE, warning=FALSE, message=FALSE}
+plot(aapi_prison_pop_plot)
+```
+
+  The reason why I chose these two states to compare the population of AAPI incarceration is because California and Washington are in the top 5 states with the highest AAPI population. I included this chart to be able to see whether the amount of incarcerated AAPI's increased or decreased over time. 
+  
+  The next chart provided below is comparing AAPI and Black male percentage of prison population nationally. 
+  
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+plot(black_vs_aapi_men_prison_pop)
+```
+There is an extreme difference n the ammount of Black men being imprisoned compared to AAPI men. Something that may contribute to this factor could possibly be the fact that Black men face more racism and predjuce than AAPI men. Along with this, there is a higher incarceration rate amoung Black men when compared to the AAPI male population. 
+
+Finally, the last map presented is a choropleth map of the United States. This visualization provides a heat map of the combined prison minority admissions nationally. Something to notice is that there are grey areas provided, which just essentially means that there was no data avaible for these states and counties. The key on the right of the choropleth indicates the prison admissions in percentages. The warmer the color of the counties, the higher the percentage is.
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+plot(heat_map)
+```
